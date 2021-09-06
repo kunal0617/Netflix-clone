@@ -30,9 +30,7 @@ export default function Signin() {
       .catch((error) => {
         setEmailAddress('');
         setPassword('');
-        setError(
-          "Sorry, we can't find an account with this email address or password. Please try again or create a new account."
-        );
+        setError(error.message);
       });
   };
 
